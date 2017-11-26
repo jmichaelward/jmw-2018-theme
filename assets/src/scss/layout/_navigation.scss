@@ -1,207 +1,36 @@
 /*--------------------------------------------------------------------------------------------------------------------||
 ||  Navigation                                                                                                        ||
 ||--------------------------------------------------------------------------------------------------------------------*/
+.menu-primary-navigation-container {
+  padding-top: 0.25rem;
+  text-align: right;
 
-/*  TYPOGRAPHY: Navigation
-------------------------------------------------------------*/
-.jmw-main-menu {
-  a {
-    text-decoration: none;
+  .menu-item {
+    display: inline-block;
+    margin: 0.25rem 0.75rem;
   }
 }
 
-/*  DECORATION: Navigation
-------------------------------------------------------------*/
-.jmw-main-menu {
-  background-color: rgb(210,210,210);
-
+.menu-item {
   a {
-    color: rgb(0,0,0);
+    border-bottom: 1px solid transparent;
+    color: $color-white;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
+    text-decoration: none;
 
     &:hover {
-      color: $color-text-accent;
+      border-bottom-color: $color__nav-menu-accent;
+      transition: border-bottom-width 0.25s ease-in;
     }
   }
 }
 
-.menu-primary-navigation-container {
-  background-color: rgb(225,225,225);
-  box-shadow: rgba(0,0,0,0.5) 1px 0 1px, rgba(0,0,0,0.15) 1px 0 1px, rgba(0,0,0,0.15) 1px 0 1px;
+.current-menu-item a {
+  color: $color__nav-menu-accent;
+  font-style: italic;
 
-  @include bp($bp__phone--lg) {
-    box-shadow: rgba(0,0,0,0.15) 1px 0 1px, rgba(0,0,0,0.15) 1px 0 1px;
+  &:hover {
+    border-bottom-color: transparent;
   }
-
-  &:before,
-  &:after {
-    background-color: rgb(0,0,0);
-  }
-}
-
-/*  LAYOUT: Navigation
-------------------------------------------------------------*/
-/* Menu container elements */
-.jmw-main-menu {
-  padding: 2rem;
-  position: relative;
-  transition: top 125ms ease-out;
-  top: -300px;
-
-  @include bp($bp__phone--lg) {
-    height: 100vh;
-    left: -300px;
-    margin: 0 2rem 0 0;
-    padding: 2rem 0 0 2rem;
-    top: auto;
-    transition: left 125ms ease-out;
-  }
-
-  .logged-in & {
-    @include bp($bp__phone--lg) {
-      padding-top: calc(2rem + 32px);
-    }
-  }
-
-  .menu-item + .menu-item {
-    margin-top: 0.25em;
-  }
-
-  .menu-item > .sub-menu {
-    margin-left: 0.75em;
-    padding-top: 0.25em;
-  }
-
-  body:not(.touch-device) .menu-primary-navigation-container:hover &,
-  .menu-primary-navigation-container.js--nav-open & {
-    top: 0;
-    transition: top 125ms ease-in-out;
-
-    @include bp($bp__phone--lg) {
-      left: 0;
-      top: auto;
-      transition: left 125ms ease-in-out;
-    }
-  }
-}
-
-.menu-primary-navigation-container {
-  height: 30px;
-  position: fixed;
-  transition: height 125ms ease-out;
-  z-index: 2;
-  width: 100%;
-
-  @include bp($bp__phone--lg) {
-    bottom: 0;
-    height: 100vh;
-    top: 0;
-    width: 30px;
-  }
-
-  /* Menu container indicator */
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    height: 3px;
-    margin: auto;
-    position: absolute;
-    top: 45%;
-    width: 10px;
-
-    @include bp($bp__phone--lg) {
-      left: auto;
-      right: 10px;
-      top: auto;
-      transition: transform 325ms ease-in-out, top 325ms ease-in-out;
-    }
-  }
-
-  &:before {
-    @include bp-range(0, $bp__phone--lg) {
-      left: -5px;
-      right: 0;
-      transform: rotate(45deg);
-    }
-
-
-    @include bp($bp__phone--lg) {
-      top: 90px;
-      transform: rotate(-45deg);
-    }
-  }
-
-  &:after {
-    @include bp-range(0, $bp__phone--lg) {
-      left: 0;
-      right: -5px;
-      transform: rotate(135deg);
-    }
-
-    @include bp($bp__phone--lg) {
-      top: 95px;
-      transform: rotate(-135deg);
-    }
-  }
-
-  .logged-in & {
-    &:before {
-      //top: 136px;
-
-      @include bp($bp__phone--lg) {
-        top: 122px;
-      }
-    }
-
-    &:after {
-      //top: 141px;
-
-      @include bp($bp__phone--lg) {
-        top: 127px;
-      }
-    }
-  }
-}
-
-/* Menu container interactions */
-.menu-primary-navigation-container.js--nav-open,
-body:not(.touch-device) .menu-primary-navigation-container:hover {
-    height: auto;
-    padding-bottom: 30px;
-    transition: height 125ms ease-in-out;
-
-    @include bp($bp__phone--lg) {
-      width: 300px;
-      transition: width 125ms ease-in-out;
-    }
-
-    /* Menu container indicator */
-    &:before,
-    &:after {
-      bottom: 12px;
-      top: auto;
-
-      @include bp($bp__phone--lg) {
-        bottom: auto;
-        right: 10px;
-        transition: transform 325ms ease-in-out, top 325ms ease-in-out;
-      }
-    }
-
-    &:before {
-      transform: rotate(-45deg);
-
-      @include bp($bp__phone--lg) {
-        top: 95px;
-        transform: rotate(135deg);
-      }
-    }
-
-    &:after {
-      transform: rotate(-135deg);
-      @include bp($bp__phone--lg) {
-        top: 90px;
-        transform: rotate(45deg);
-      }
-    }
 }
