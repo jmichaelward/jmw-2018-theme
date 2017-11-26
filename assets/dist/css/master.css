@@ -542,10 +542,22 @@ img {
 .site-footer {
   background-color: #aac864;
   display: block;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  position: relative;
+  transform: rotate(-0.5deg); }
+  .site-footer:after {
+    background-color: #aac864;
+    bottom: -3rem;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 20; }
 
 .site-footer__inner {
   margin: 0 auto;
   max-width: 1600px;
+  transform: rotate(1deg);
   text-align: center;
   width: 90%; }
