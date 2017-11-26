@@ -123,30 +123,32 @@ img {
   width: 4.75rem;
   z-index: 10; }
   .site-header__branding:before, .site-header__branding:after {
+    border: 1rem solid white;
+    border-radius: 2rem;
     background-color: white;
     content: '';
     display: block;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 0.5rem; }
+    width: 2rem;
+    z-index: -1; }
   .site-header__branding:before {
-    left: -0.5rem; }
+    left: -2rem; }
   .site-header__branding:after {
-    right: -0.5rem; }
+    right: -2rem; }
 
 .site-header__home-link {
   background: #282828 url("../img/jw_monogram_trans.png") center center no-repeat;
   background-size: contain;
-  color: transparent;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 6px;
   bottom: -6px;
+  display: block;
   left: 0;
   margin: auto;
-  z-index: -1; }
+  position: absolute;
+  right: 0;
+  text-indent: -9999px;
+  top: 6px; }
   .site-header__home-link:hover {
     background-color: #82a028;
     transition: background-color 0.125s ease-in; }
