@@ -21,10 +21,14 @@
 }
 
 .site-footer {
-  margin-top: 6rem;
-  overflow: hidden;
+  background-color: $color__accent;
+  display: block;
+  padding: 3rem 0;
+}
 
-  &:after {
-    @include clearfix;
-  }
+.site-footer__inner {
+  margin: 0 auto;
+  max-width: $width-max--outer;
+  text-align: center;
+  width: 90%;
 }

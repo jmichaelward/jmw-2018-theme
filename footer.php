@@ -8,7 +8,9 @@
 ?>
 </div><!-- .site-body -->
 <footer class="site-footer">
-	<p class="site-footer__copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> J. Michael Ward</p>
+	<div class="site-footer__inner">
+		<p class="site-footer__copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> J. Michael Ward</p>
+	</div>
 </footer>
 <?php wp_footer(); ?>
 </body>
