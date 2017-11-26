@@ -3,19 +3,20 @@ $width-max--outer: 1600px;
 $width-max--inner: 1040px;
 
 // Colors
-$color__nav-menu-accent: rgb(170, 200, 100);
+$color__accent: rgb(170, 200, 100);
+$color__nav-menu-accent: $color__accent;
 
 $color-white: rgb(255, 255, 255);
 
 $color-background-primary: $color-white;
 $color-background-secondary: rgb(253,253,253);
-$color-background-accent: rgb(210,0,0);
+$color-background-accent: $color__accent;
 $color-background-accent-transparent: rgba(230,0,0,0.8);
 
 $color-border__heading: rgb(210,210,210);
 
 $color-text-primary: rgb(34,34,34);
-$color-text-accent: rgb(210,0,0);
+$color-text-accent: $color__accent;
 $color-text-lightest: rgb(255,255,255);
 
 // Fonts

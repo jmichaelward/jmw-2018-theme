@@ -67,14 +67,7 @@
 }
 
 %link-standard {
-  @extend %weight--bold;
-  color: $color-text-accent;
-  font-family: inherit;
   text-decoration: none;
-
-  &:hover {
-    border-bottom: 1px solid $color-text-accent;
-  }
 }
 
 %transform-color-hover {

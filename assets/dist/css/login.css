@@ -22,7 +22,7 @@ with the width and height.
   transition: background-color 300ms ease-in-out;
   text-indent: -9999px; }
   .login h1 a:hover {
-    background-color: #d20000; }
+    background-color: #aac864; }
 
 #login {
   position: relative;
@@ -40,7 +40,7 @@ with the width and height.
   #login .message {
     border-bottom: 1px solid #222222; }
   #login #login_error {
-    border-bottom: 1px solid #d20000; }
+    border-bottom: 1px solid #aac864; }
   #login #nav,
   #login #backtoblog {
     display: inline-block;
@@ -49,7 +49,7 @@ with the width and height.
     position: absolute; }
     #login #nav a:hover,
     #login #backtoblog a:hover {
-      color: #d20000; }
+      color: #aac864; }
   #login #backtoblog {
     left: 0; }
   #login #nav {
@@ -73,7 +73,7 @@ with the width and height.
     text-align: center;
     transition: background-color 300ms ease-in-out; }
     #loginform .input:focus {
-      background-color: #d20000; }
+      background-color: #aac864; }
   #loginform p + p label {
     margin-top: 1rem; }
 
@@ -97,7 +97,7 @@ with the width and height.
   but since we're referencing the id, it should be easy.
   */
 #wp-submit {
-  background: #d20000;
+  background: #aac864;
   border: 0 none;
   border-radius: 0;
   box-shadow: none;
@@ -109,6 +109,6 @@ with the width and height.
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out; }
   #wp-submit:hover {
-    background: #ff0606; }
+    background: #bfd58a; }
 
 /* login button*/
