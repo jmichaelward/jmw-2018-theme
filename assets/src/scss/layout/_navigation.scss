@@ -3,7 +3,11 @@
 ||--------------------------------------------------------------------------------------------------------------------*/
 .menu-primary-navigation-container {
   padding-top: 0.25rem;
-  text-align: right;
+  text-align: left;
+
+  @include bp($bp__phone--lg) {
+    text-align: right;
+  }
 
   .menu-item {
     display: inline-block;

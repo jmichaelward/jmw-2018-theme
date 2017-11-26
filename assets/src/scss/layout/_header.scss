@@ -15,8 +15,11 @@
 .site-header__branding {
   background-color: $color-white;
   display: block;
-  position: absolute;
   height: 3.9525rem;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right:0;
   top: -1px;
   width: 4.75rem;
   z-index: 10;
@@ -43,6 +46,11 @@
     right: -2rem;
   }
 
+  @include bp($bp__phone--lg) {
+    margin: auto;
+    left: auto;
+    right: auto;
+  }
 }
 
 .site-header__home-link {
