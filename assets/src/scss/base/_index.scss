@@ -1,0 +1,57 @@
+html,
+body {
+  @extend %font-sans;
+  font-size: 100%;
+  line-height: 1.4;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+img {
+  height: auto;
+  max-height: 90vh;
+  max-width: 100%;
+  width: auto;
+}
+
+
+
+
+
+/* WordPress required classes
+---------------------------------------------------------------*/
+.aligncenter {
+  /* */
+}
+
+.alignleft {
+  /* */
+}
+
+.alignright {
+  /* */
+}
+
+.bypostauthor {
+  /* */
+}
+
+.gallery-caption {
+  /* */
+}
+
+.sticky {
+  /* */
+}
+
+.wp-caption {
+  /*
+  */
+}
+
+.wp-caption-text {
+  /* */
+}
+

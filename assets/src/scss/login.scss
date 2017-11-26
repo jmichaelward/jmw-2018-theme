@@ -1,0 +1,168 @@
+@import "util/variables";
+
+/**
+ * WP Login styles.
+ *
+ * This is called in admin.php
+ */
+
+body.login {
+  background-color: white;
+}
+
+#login {
+
+}
+
+/* the form box */
+
+/*
+This is the Wordpress logo in the admin area.
+You'll have to load your own images and mess
+with the width and height.
+*/
+$logo-width: 7.421875rem;
+
+.login h1 a {
+  background: $color-text-primary url('../img/jw_monogram_trans.png') center center no-repeat;
+  background-size: contain;
+  display: block;
+  margin: 0 auto;
+  height: calc(#{$logo-width} * .831578947);
+  width: $logo-width;
+  transition: background-color 300ms ease-in-out;
+  text-indent: -9999px;
+
+  &:hover {
+    background-color: $color-text-accent;
+  }
+}
+
+#login {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+
+  #login_error,
+  .message {
+    border: 0 none;
+    box-shadow: none;
+    box-sizing: border-box !important;
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .message {
+    border-bottom: 1px solid $color-text-primary;
+  }
+
+  #login_error {
+    border-bottom: 1px solid $color-text-accent;
+  }
+
+  #nav,
+  #backtoblog {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    a:hover {
+      color: $color-text-accent;
+    }
+  }
+
+  #backtoblog {
+    left: 0;
+  }
+
+  #nav {
+    right: 0;
+  }
+}
+
+#loginform {
+  border: 0 none;
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 100%;
+
+  .input {
+    background-color: $color-text-primary;
+    border: 0 none;
+    box-shadow: none;
+    color: $color-white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 0.75rem;
+    text-align: center;
+    transition: background-color 300ms ease-in-out;
+
+    &:focus {
+      background-color: $color-background-accent;
+    }
+  }
+
+  p + p label {
+    margin-top: 1rem;
+  }
+}
+
+#login {
+  label {
+    color: $color-text-primary;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+  }
+
+  form {
+    p.submit {
+      margin-top: 3rem;
+    }
+
+    p.forgetmenot {
+      margin-top: 3rem;
+    }
+  }
+}
+
+
+
+
+  body form .input {
+
+  }
+
+  /*
+  You'll have to override some of the default styles
+  but since we're referencing the id, it should be easy.
+  */
+  #wp-submit {
+    background: $color-background-accent;
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    height: 40px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+      background: lighten($color-background-accent, 10%);
+    }
+  }
+
+/* login button*/
+
+

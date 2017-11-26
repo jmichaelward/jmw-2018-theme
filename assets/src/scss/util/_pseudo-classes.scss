@@ -1,0 +1,82 @@
+// Typography
+%weight--extra-light {
+  font-weight: 200;
+}
+
+%weight--light {
+  font-weight: 300;
+}
+
+%weight--normal {
+  font-weight: 400;
+}
+
+%weight--semi-bold {
+  font-weight: 600;
+}
+
+%weight--bold {
+  font-weight: 700;
+}
+
+%sans {
+  font-family: $font-sans;
+}
+
+%sans--alt {
+  font-family: $font-sans--alt;
+}
+
+%serif {
+  font-family: sans-serif;//$font-serif;
+}
+
+%font-sans {
+  @extend %sans;
+  @extend %weight--normal;
+}
+
+%font-sans--semi-bold {
+  @extend %sans;
+  @extend %weight--semi-bold;
+}
+
+%font-sans--bold {
+  @extend %sans;
+  @extend %weight--bold;
+}
+
+%font-sans-alt {
+  @extend %sans--alt;
+  @extend %weight--normal;
+}
+
+%font-sans-alt--bold {
+  @extend %sans--alt;
+  @extend %weight--bold;
+}
+
+%font-serif {
+  @extend %serif;
+  @extend %weight--normal;
+}
+
+%font-serif--bold {
+  @extend %serif;
+  @extend %weight--bold;
+}
+
+%link-standard {
+  @extend %weight--bold;
+  color: $color-text-accent;
+  font-family: inherit;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid $color-text-accent;
+  }
+}
+
+%transform-color-hover {
+  transition: color 150ms ease-in;
+}
