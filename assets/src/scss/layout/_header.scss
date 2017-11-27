@@ -67,6 +67,24 @@
   text-indent: -9999px;
   top: 6px;
 
+  &:before,
+  &:after {
+    background-color: $color-white;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+  }
+
+  &:before {
+    left: 2px;
+  }
+
+  &:after {
+    right: 2px;
+  }
+
   &:hover {
     background-color: rgb(130, 160, 40);
     transition: background-color 0.125s ease-in;
