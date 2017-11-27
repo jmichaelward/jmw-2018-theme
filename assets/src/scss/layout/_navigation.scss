@@ -3,15 +3,19 @@
 ||--------------------------------------------------------------------------------------------------------------------*/
 .menu-primary-navigation-container {
   padding-top: 0.25rem;
-  text-align: left;
+  text-align: right;
 
-  @include bp($bp__phone--lg) {
-    text-align: right;
+  @include bp($bp__tablet) {
+    visibility: visible;
   }
 
   .menu-item {
-    display: inline-block;
+    display: block;
     margin: 0.25rem 0.75rem;
+
+    @include bp($bp__tablet) {
+      display: inline-block;
+    }
   }
 }
 
@@ -36,5 +40,16 @@
 
   &:hover {
     border-bottom-color: transparent;
+  }
+}
+
+.pagination a {
+  color: $color-text-primary;
+
+  &.next,
+  &.prev,
+  &.page-numbers {
+    color: $color-text-accent;
+    display: inline-block;
   }
 }

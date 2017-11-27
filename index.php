@@ -13,7 +13,9 @@
 			<?php get_template_part( 'content' ); ?>
 		<?php endwhile; ?>
 
-		<?php JMW2018\pagination( $wp_query ); ?>
+		<?php if ( get_next_posts_link() || get_previous_posts_link() ) : ?>
+			<?php JMW2018\pagination( $wp_query ); ?>
+		<?php endif; ?>
 	<?php endif; ?>
 </main>
 

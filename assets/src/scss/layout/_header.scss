@@ -14,13 +14,13 @@
 
 .site-header__branding {
   background-color: $color-white;
+  bottom: 0;
   display: block;
   height: 3.9525rem;
-  left: 0;
+  left: 20px;
   margin: 0 auto;
   position: absolute;
-  right:0;
-  top: -1px;
+  right: auto;
   width: 4.75rem;
   z-index: 10;
 
@@ -47,7 +47,8 @@
     right: -2rem;
   }
 
-  @include bp($bp__phone) {
+  @include bp($bp__tablet) {
+    bottom: auto;
     margin: auto;
     left: auto;
     right: auto;
