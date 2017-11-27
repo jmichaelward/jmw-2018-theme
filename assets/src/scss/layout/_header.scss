@@ -26,15 +26,16 @@
 
   &:before,
   &:after {
-    border: 1rem solid $color-white;
+    border: 1.375rem solid $color-white;
     border-radius: 2rem;
     background-color: $color-white;
     content: '';
     display: block;
+    height: 2rem;
+    width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2rem;
     z-index: -1;
   }
 
@@ -46,7 +47,7 @@
     right: -2rem;
   }
 
-  @include bp($bp__phone--lg) {
+  @include bp($bp__phone) {
     margin: auto;
     left: auto;
     right: auto;

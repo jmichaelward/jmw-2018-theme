@@ -12,6 +12,8 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content' ); ?>
 		<?php endwhile; ?>
+
+		<?php JMW2018\pagination( $wp_query ); ?>
 	<?php endif; ?>
 </main>
 

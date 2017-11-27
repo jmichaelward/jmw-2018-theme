@@ -33,12 +33,16 @@
     }
   }
 
+  h2 {
+    font-size: 1.75rem;
+  }
+
   h3 {
     @extend %font-sans-alt;
     font-size: 1.125rem;
 
     @include bp($bp__phone--lg) {
-      font-size: 2rem;
+      font-size: 1.625rem;
     }
   }
 

@@ -30,6 +30,9 @@ class Theme {
 		add_action( 'admin_init', [ $this, 'support' ] );
 		add_action( 'admin_init', [ $this, 'admin_styles' ] );
 
+		// Posts page setup.
+		add_action( 'pre_get_posts', [ $this, 'filter_posts_page'] );
+
 		// Menu setup.
 		add_action( 'init', [ $this, 'menus' ] );
 
@@ -110,5 +113,18 @@ class Theme {
 	 */
 	public function scripts() {
 		wp_enqueue_script( 'jmw_main_js', get_template_directory_uri() . '/assets/dist/js/app.js', [ 'jquery' ], $this->version, true );
+	}
+
+	/**
+	 * Filter posts page to include only updates.
+	 *
+	 * @param $posts
+	 */
+	public function filter_posts_page( \WP_Query $query ) {
+		if ( $query->is_home() && 'nav_menu_item' !== $query->query_vars['post_type'] ) {
+			$query->set( 'category__in', 1 );
+		}
+
+		return $query;
 	}
 }
