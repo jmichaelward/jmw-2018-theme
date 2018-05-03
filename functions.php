@@ -2,12 +2,12 @@
 /**
  * Main theme functions file. Loads the site theme assets.
  *
- * @package jmw-2016
+ * @package JMichaelWard\Theme2018
  */
 
-use JMW2018\Theme;
+use JMichaelWard\Theme2018;
 
 require_once get_template_directory() . '/src/JMW2018/Theme.php';
 
-$theme = new Theme();
+$theme = new Theme2018\Theme();
 $theme->setup();

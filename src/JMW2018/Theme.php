@@ -1,11 +1,14 @@
 <?php // @codingStandardsIgnoreLine
+
 /**
  * The main theme class. Registers theme assets, menus, and fonts.
  *
- * @package JMW2016
+ * @package JMichaelWard\Theme2018;
  */
 
-namespace JMW2018;
+namespace JMichaelWard\Theme2018;
+
+use \WP_Query;
 
 /**
  * Class Theme
@@ -31,7 +34,7 @@ class Theme {
 		add_action( 'admin_init', [ $this, 'admin_styles' ] );
 
 		// Posts page setup.
-		add_action( 'pre_get_posts', [ $this, 'filter_posts_page'] );
+		add_action( 'pre_get_posts', [ $this, 'filter_posts_page' ] );
 
 		// Menu setup.
 		add_action( 'init', [ $this, 'menus' ] );
@@ -118,9 +121,11 @@ class Theme {
 	/**
 	 * Filter posts page to include only updates.
 	 *
-	 * @param $posts
+	 * @param WP_Query $query WordPress Query object.
+	 *
+	 * @return WP_Query $query
 	 */
-	public function filter_posts_page( \WP_Query $query ) {
+	public function filter_posts_page( WP_Query $query ) {
 		if ( $query->is_home() && 'nav_menu_item' !== $query->query_vars['post_type'] ) {
 			$query->set( 'category__in', 1 );
 		}

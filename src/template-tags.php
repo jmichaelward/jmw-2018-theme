@@ -2,10 +2,10 @@
 /**
  * Helper functions for outputting template content.
  *
- * @package jmw-2016
+ * @package JMichaelWard\Theme2018
  */
 
-namespace JMW2018;
+namespace JMichaelWard\Theme2018;
 
 /**
  * Render the markup for the main menu.
