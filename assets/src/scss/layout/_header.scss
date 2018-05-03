@@ -13,7 +13,7 @@
 }
 
 .site-header__branding {
-  background-color: $color-white;
+  //background-color: $color-white;
   bottom: 0;
   display: block;
   height: 3.9525rem;
@@ -56,8 +56,7 @@
 }
 
 .site-header__home-link {
-  background: rgb(40, 40, 40) url('../img/jw_monogram_trans.png') center center no-repeat;
-  background-size: cover;
+  background-color: $color-black;
   bottom: -6px;
   display: block;
   left: 0;
@@ -67,22 +66,15 @@
   text-indent: -9999px;
   top: 6px;
 
-  &:before,
-  &:after {
-    background-color: $color-white;
-    display: block;
+  span {
+    background: transparent url('../img/jw_monogram_trans.png') center center no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
-    width: 1px;
-  }
-
-  &:before {
-    left: 2px;
-  }
-
-  &:after {
-    right: 2px;
+    left: 0;
+    margin: auto;
   }
 
   &:hover {
