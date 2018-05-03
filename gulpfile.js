@@ -10,7 +10,7 @@ let autoprefixerOptions = {
 
 gulp.task( 'browser-sync', () => {
 	browserSync.init( {
-		proxy: 'https://jmichaelward.dev',
+		proxy: 'https://jmichaelward.localhost',
 		https: {
 			key: '/Users/jmichaelward/.localhost-ssl/key.pem',
 			cert: '/Users/jmichaelward/.localhost-ssl/cert.pem'

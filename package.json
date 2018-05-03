@@ -6,7 +6,7 @@
     "staging",
     "production"
   ],
-  "_criticalUrl": "http://jmichaelward.dev",
+  "_criticalUrl": "https://jmichaelward.localhost",
   "engines": {
     "node": ">=4.2.6",
     "npm": ">=3.0.0"
