@@ -2,7 +2,7 @@
 ||  Site Branding                                                                                                     ||
 ||--------------------------------------------------------------------------------------------------------------------*/
 .site-header {
-  background-color: rgb(40, 40, 40);
+  background-color: $color-black;
 
   &:after {
     background-color: $color-white;
@@ -74,7 +74,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 1px;
   }
 
   &:before {
@@ -92,9 +92,9 @@
 }
 
 .site-header__inner {
-  padding: 0 0 0.375rem 0;
   margin: 0 auto;
   max-width: $width-max--outer;
+  padding: 0 0 0.375rem 0;
   position: relative;
   width: 90%;
 }

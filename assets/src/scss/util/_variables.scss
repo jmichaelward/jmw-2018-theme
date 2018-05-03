@@ -7,11 +7,15 @@ $color__accent: rgb(170, 200, 100);
 $color__nav-menu-accent: $color__accent;
 
 $color-white: rgb(255, 255, 255);
+$color-black: rgb(40, 40, 40);
 
 $color-background-primary: $color-white;
 $color-background-secondary: rgb(253,253,253);
 $color-background-accent: $color__accent;
 $color-background-accent-transparent: rgba(230,0,0,0.8);
+
+// Header
+$color-background-header: $color-black;
 
 $color-border__heading: rgb(210,210,210);
 
