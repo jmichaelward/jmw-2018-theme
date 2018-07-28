@@ -100,7 +100,7 @@ class Theme {
 	 */
 	public function styles() {
 		// Theme stylesheet.
-		wp_enqueue_style( 'jmw_main_theme', get_stylesheet_directory_uri() . '/assets/dist/css/master.css', [], $this->version );
+		wp_enqueue_style( 'jmw_main_theme', get_stylesheet_directory_uri() . '/assets/dist/app.css', [], $this->version );
 
 	}
 
@@ -108,14 +108,14 @@ class Theme {
 	 * Register login styles.
 	 */
 	public function login_styles() {
-		wp_enqueue_style( 'jmw_login', get_stylesheet_directory_uri() . '/assets/dist/css/login.css', [], $this->version, false );
+		wp_enqueue_style( 'jmw_login', get_stylesheet_directory_uri() . '/assets/dist/login.css', [], $this->version, false );
 	}
 
 	/**
 	 * Register theme scripts.
 	 */
 	public function scripts() {
-		wp_enqueue_script( 'jmw_main_js', get_template_directory_uri() . '/assets/dist/js/app.js', [ 'jquery' ], $this->version, true );
+		wp_enqueue_script( 'jmw_main_js', get_template_directory_uri() . '/assets/dist/app.js', [ 'jquery' ], $this->version, true );
 	}
 
 	/**

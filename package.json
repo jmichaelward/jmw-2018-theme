@@ -12,6 +12,7 @@
     "npm": ">=3.0.0"
   },
   "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -36,11 +37,14 @@
     "jquery": "^3.2.1",
     "lodash": "^3.10.1",
     "modernizr": "^3.3.1",
+    "node-sass": "^4.9.2",
     "path": "^0.12.7",
     "postcss-flexibility": "^1.0.1",
     "require-all": "^2.2.0",
+    "sass-loader": "^7.0.3",
     "webpack": "^3.5.4",
     "webpack-compiler": "^0.1.0",
+    "webpack-notifier": "^1.6.0",
     "webpack-stream": "^4.0.0"
   },
   "dependencies": {
