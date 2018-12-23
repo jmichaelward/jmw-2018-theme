@@ -126,6 +126,10 @@ class Theme {
 	 * @return WP_Query $query
 	 */
 	public function filter_posts_page( WP_Query $query ) {
+		if ( ! isset( $query->query_vars['post_type'] ) ) {
+			return $query;
+		}
+
 		if ( $query->is_home() && 'nav_menu_item' !== $query->query_vars['post_type'] ) {
 			$query->set( 'category__in', 1 );
 		}
