@@ -1,0 +1,13 @@
+{
+    "name": "jmichaelward/jmw-2018-theme",
+    "description": "A 2018 theme for J. Michael Ward.",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremy Ward",
+            "email": "jeremy@jmichaelward.com"
+        }
+    ],
+    "require": {}
+}
