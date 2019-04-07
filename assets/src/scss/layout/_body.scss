@@ -39,7 +39,7 @@
   p {
     line-height: 1.4;
 
-    @include bp($bp__phone) {
+    @include bp(bp__phone--lg) {
       line-height: 1.8;
     }
   }
