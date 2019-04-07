@@ -2,7 +2,7 @@
 ||  Body                                                                                                              ||
 ||--------------------------------------------------------------------------------------------------------------------*/
 .site-body {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   margin: 0 auto;
   max-width: $width-max--outer;
   padding: 3rem 0 6rem 0;
@@ -37,7 +37,7 @@
   }
 
   p {
-    line-height: 1.4;
+    line-height: 1.5;
 
     @include bp(bp__phone--lg) {
       line-height: 1.8;
