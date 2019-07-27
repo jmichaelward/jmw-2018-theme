@@ -30,7 +30,7 @@ class Theme {
 		$this->load_helper_functions();
 
 		// Admin setup.
-		add_action( 'admin_init', [ $this, 'support' ] );
+		add_action( 'after_setup_theme', [ $this, 'support' ] );
 		add_action( 'admin_init', [ $this, 'admin_styles' ] );
 
 		// Posts page setup.
@@ -64,6 +64,7 @@ class Theme {
 	public function support() {
 		// Turn on featured images.
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'title-tag' );
 	}
 
 	/**
