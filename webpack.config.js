@@ -9,6 +9,7 @@ Encore
     .autoProvidejQuery()
     // .enableVersioning(Encore.isProduction())
     .enableSourceMaps(!Encore.isProduction())
+    .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSassLoader()
