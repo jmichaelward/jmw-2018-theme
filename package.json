@@ -1,5 +1,5 @@
 {
-  "name": "jmichaelward",
+  "name": "jmw-2018-theme",
   "version": "1.0.0",
   "_envs": [
     "development",
@@ -10,6 +10,10 @@
   "engines": {
     "node": ">=4.2.6",
     "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "dev": "yarn encore dev",
+    "build": "yarn encore production"
   },
   "devDependencies": {
     "@babel/core": "^7",
