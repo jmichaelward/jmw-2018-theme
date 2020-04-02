@@ -21,7 +21,7 @@ class Theme {
 	 *
 	 * @var string
 	 */
-	public $version = '0.1.0';
+	public $version;
 
 	/**
 	 * Setup theme assets and support.
@@ -30,6 +30,7 @@ class Theme {
 		$this->load_helper_functions();
 
 		// Admin setup.
+		add_action( 'after_setup_theme', [ $this, 'hydrate' ] );
 		add_action( 'after_setup_theme', [ $this, 'support' ] );
 		add_action( 'admin_init', [ $this, 'admin_styles' ] );
 
@@ -46,6 +47,15 @@ class Theme {
 
 		// Login setup.
 		add_action( 'login_enqueue_scripts', [ $this, 'login_styles' ] );
+	}
+
+	/**
+	 * Hydrate this object with data.
+	 */
+	public function hydrate() {
+		$theme = wp_get_theme();
+
+		$this->version = $theme['Version'];
 	}
 
 	/**
