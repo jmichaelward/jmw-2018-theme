@@ -24,17 +24,16 @@ with the width and height.
 $logo-width: 7.421875rem;
 
 .login h1 a {
-  background: $color-text-primary url('../img/jw_monogram_trans.png') center center no-repeat;
-  background-size: contain;
-  display: block;
-  margin: 0 auto;
-  height: calc(#{$logo-width} * .831578947);
-  width: $logo-width;
-  transition: background-color 300ms ease-in-out;
-  text-indent: -9999px;
+  display: none;
+}
 
-  &:hover {
-    background-color: $color-text-accent;
+.login-logo {
+  margin: 0 auto;
+  width: 200px;
+
+  &:hover svg {
+    fill: $color-background-accent;
+    transition: fill 300ms ease-in-out;
   }
 }
 

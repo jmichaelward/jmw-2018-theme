@@ -19,7 +19,9 @@
 		<div class="site-header__branding">
 			<a class="site-header__home-link" href="<?php echo esc_url( home_url() ); ?>"
 			   title="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>">
-				<span class="site-header__logo"><?php bloginfo( 'name' ); ?></span>
+				<span class="site-header__logo">
+					<?php echo file_get_contents( get_template_directory() . '/assets/src/img/jw_logo.svg' ); ?>
+				</span>
 			</a>
 		</div>
 

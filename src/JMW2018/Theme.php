@@ -47,6 +47,7 @@ class Theme {
 
 		// Login setup.
 		add_action( 'login_enqueue_scripts', [ $this, 'login_styles' ] );
+		add_action( 'login_message', [ $this, 'login_message' ] );
 	}
 
 	/**
@@ -120,6 +121,19 @@ class Theme {
 	 */
 	public function login_styles() {
 		wp_enqueue_style( 'jmw_login', get_stylesheet_directory_uri() . '/assets/dist/login.css', [], $this->version, false );
+	}
+
+	/**
+	 * Add in custom logo markup.
+	 *
+	 * @param string $message Original message.
+	 *
+	 * @author Jeremy Ward <jeremy@jmichaelward.com>
+	 * @since  2020-12-13
+	 * @return string
+	 */
+	public function login_message( $message ) {
+		return '<div class="login-logo"><a href="' . home_url() . ' ">' . file_get_contents( get_stylesheet_directory() . '/assets/src/img/jw_logo.svg' ) . '</a></div>';
 	}
 
 	/**
