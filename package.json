@@ -13,6 +13,7 @@
   },
   "scripts": {
     "dev": "yarn encore dev",
+    "watch": "yarn encore dev --watch",
     "build": "yarn encore production"
   },
   "devDependencies": {
